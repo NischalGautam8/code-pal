@@ -1,0 +1,2 @@
+Get started by adding your api key in .env and `python main.py`
+The application takes user prompt and divides the work between planner agent , architect agent and coder agent , the planner agent plans the project list major features of the project  , the architect agent list steps to be executed to acheive the goal with details and coder agent runs in loop executes each step until result is acheived. the output is the entire code for the project
