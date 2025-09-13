@@ -1,0 +1,126 @@
+/* Universal reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body layout */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    background-image: linear-gradient(135deg, #e0e7ff 0%, #f0f2f5 100%);
+}
+
+/* Calculator container */
+.calculator {
+    width: 320px;
+    max-width: 100%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Display */
+.display {
+    font-size: 2rem;
+    text-align: right;
+    padding: 1rem;
+    background-color: #eaeaea;
+    color: #333;
+    overflow-x: auto;
+    white-space: nowrap;
+    /* hide scrollbars while still allowing scroll */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.display::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Buttons grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background-color: #f9f9f9;
+}
+
+.buttons button {
+    font-size: 1.2rem;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(145deg, #ffffff, #e0e0e0);
+    color: #333;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    user-select: none;
+}
+
+.buttons button:hover,
+.buttons button:focus {
+    background: linear-gradient(145deg, #e0e0e0, #cfcfcf);
+    outline: none;
+    transform: translateY(1px);
+}
+
+/* Operator buttons */
+.buttons button[data-action="operator"] {
+    background: linear-gradient(145deg, #ff9500, #e68900);
+    color: #fff;
+}
+
+.buttons button[data-action="operator"]:hover,
+.buttons button[data-action="operator"]:focus {
+    background: linear-gradient(145deg, #e68900, #cc7a00);
+}
+
+/* Equals button – give it a standout colour */
+.buttons button[data-action="equals"] {
+    background: linear-gradient(145deg, #34c759, #28a745);
+    color: #fff;
+}
+
+.buttons button[data-action="equals"]:hover,
+.buttons button[data-action="equals"]:focus {
+    background: linear-gradient(145deg, #28a745, #218838);
+}
+
+/* Clear / Backspace – subtle accent */
+.buttons button[data-action="clear"],
+.buttons button[data-action="backspace"] {
+    background: linear-gradient(145deg, #d1d1d1, #b5b5b5);
+    color: #333;
+}
+
+.buttons button[data-action="clear"]:hover,
+.buttons button[data-action="backspace"]:hover,
+.buttons button[data-action="clear"]:focus,
+.buttons button[data-action="backspace"]:focus {
+    background: linear-gradient(145deg, #b5b5b5, #999999);
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+    .calculator {
+        width: 100%;
+        margin: 0 0.5rem;
+    }
+    .display {
+        font-size: 1.5rem;
+        padding: 0.75rem;
+    }
+    .buttons button {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+}

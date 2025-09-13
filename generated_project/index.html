@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="calculator">
+        <div id="display" class="display" aria-label="Calculator display" role="textbox" tabindex="0">0</div>
+        <div class="buttons">
+            <!-- Digits -->
+            <button type="button" id="btn-7" data-action="digit" aria-label="Digit 7">7</button>
+            <button type="button" id="btn-8" data-action="digit" aria-label="Digit 8">8</button>
+            <button type="button" id="btn-9" data-action="digit" aria-label="Digit 9">9</button>
+            <button type="button" id="btn-divide" data-action="operator" aria-label="Divide">/</button>
+
+            <button type="button" id="btn-4" data-action="digit" aria-label="Digit 4">4</button>
+            <button type="button" id="btn-5" data-action="digit" aria-label="Digit 5">5</button>
+            <button type="button" id="btn-6" data-action="digit" aria-label="Digit 6">6</button>
+            <button type="button" id="btn-multiply" data-action="operator" aria-label="Multiply">*</button>
+
+            <button type="button" id="btn-1" data-action="digit" aria-label="Digit 1">1</button>
+            <button type="button" id="btn-2" data-action="digit" aria-label="Digit 2">2</button>
+            <button type="button" id="btn-3" data-action="digit" aria-label="Digit 3">3</button>
+            <button type="button" id="btn-subtract" data-action="operator" aria-label="Subtract">-</button>
+
+            <button type="button" id="btn-0" data-action="digit" aria-label="Digit 0">0</button>
+            <button type="button" id="btn-decimal" data-action="decimal" aria-label="Decimal point">.</button>
+            <button type="button" id="btn-equals" data-action="equals" aria-label="Equals">=</button>
+            <button type="button" id="btn-add" data-action="operator" aria-label="Add">+</button>
+
+            <!-- Utility buttons -->
+            <button type="button" id="btn-clear" data-action="clear" aria-label="Clear">C</button>
+            <button type="button" id="btn-backspace" data-action="backspace" aria-label="Backspace">←</button>
+        </div>
+    </div>
+</body>
+</html>
